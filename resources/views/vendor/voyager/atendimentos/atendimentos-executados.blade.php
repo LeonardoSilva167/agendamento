@@ -1,13 +1,6 @@
 @php
     // dd(!filter_var("http://localhost:8000/storage/atendimentos\December2022\X07hXLLwp2n5noakjlNU.png", FILTER_VALIDATE_URL));
-    function getColor($distancia){
-        $color = "default";
 
-        if($distancia <= 1.000){$color = "success";}
-        else if($distancia > 1.000 && $distancia <= 5.000){$color = "warning";}
-        else if($distancia > 5.000){$color = "danger";}
-        return $color;
-    }
 
     // dd($atendimentos);
 @endphp
@@ -122,7 +115,7 @@
                                             <td><p>{{$atendimento->nome_cliente}}</p></td>
                                             <td><p>{{$atendimento->data_hora}}</p></td>
                                             <td><p>{{$atendimento->status}}</p></td>
-                                            <td><span class="label label-{{getColor($atendimento->distancia)}}">{{formataKilometros($atendimento->distancia)}} km</span></td>
+                                            <td><span class="label label-{{getColorKM($atendimento->distancia)}}">{{formataKilometros($atendimento->distancia)}} km</span></td>
                                             <td class="no-sort no-click bread-actions">
                                                 <a href="{{route('voyager.atendimentos.show',$atendimento->id)}}" title="View"
                                                     class="btn btn-sm btn-warning pull-right view">

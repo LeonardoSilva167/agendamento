@@ -93,11 +93,6 @@
                                             <th>Telefone</th>
                                             <th>Dia / Horário</th>
                                             <th>Endereço</th>
-                                            <th>Foto do Número da Casa</th>
-                                            <th>Foto do Aparelho</th>
-                                            <th>Foto do Aplicativo aberto</th>
-                                            <th>Foto Adicional</th>
-                                            <th>Foto Adicional</th>
                                             <th class="actions text-right dt-not-orderable">Actions</th>
                                         </tr>
                                     </thead>
@@ -114,11 +109,6 @@
                                             <td><p>{{$atendimento->telefone}}</p></td>
                                             <td><p>{{$atendimento->data_hora}}</p></td>
                                             <td><p>{{$atendimento->endereco}}</p></td>
-                                            <td><img src="@if($atendimento->foto_1) {{url('/storage/\/').$atendimento->foto_1}}  @endif" style="width:100px"></td>
-                                            <td><img src="@if($atendimento->foto_2) {{url('/storage/\/').$atendimento->foto_2}}  @endif" style="width:100px"></td>
-                                            <td><img src="@if($atendimento->foto_3) {{url('/storage/\/').$atendimento->foto_3}}  @endif" style="width:100px"></td>
-                                            <td><img src="@if($atendimento->foto_4) {{url('/storage/\/').$atendimento->foto_4}}  @endif" style="width:100px"></td>
-                                            <td><img src="@if($atendimento->foto_5) {{url('/storage/\/').$atendimento->foto_5}}  @endif" style="width:100px"></td>
                                             <td class="no-sort no-click bread-actions">
                                                 <a href="{{route('voyager.atendimentos.show', $atendimento->id)}}" title="View"
                                                     class="btn btn-sm btn-warning pull-right view">

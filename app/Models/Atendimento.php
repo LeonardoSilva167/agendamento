@@ -73,7 +73,8 @@ class Atendimento extends Model
             ,foto_2
             ,foto_3
             ,foto_4
-            ,foto_5")
+            ,foto_5
+            ,u.name AS instalador_name")
             ->join('public.agendamentos AS ag', 'ag.id', '=', 'ate.agendamento_id')
             ->join('public.users AS u', 'u.id', '=', 'ate.user_id')
             ->join('public.status_atendimentos AS sa', 'sa.id', '=', 'ate.status_atendimento_id');

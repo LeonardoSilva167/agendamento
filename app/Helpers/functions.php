@@ -50,3 +50,12 @@ function isLoged(){
 function formataKilometros($km){
     return (floatval($km) > 1.000)? number_format($km, 1, '.', '') : $km;
 }
+
+function getColorKM($distancia){
+    $color = "default";
+
+    if($distancia <= 1.000){$color = "success";}
+    else if($distancia > 1.000 && $distancia <= 5.000){$color = "warning";}
+    else if($distancia > 5.000){$color = "danger";}
+    return $color;
+}
